@@ -1,5 +1,36 @@
 # 悦速进销存
 
+基于 **Go + Wails v3 + Vue 3 + SQLite** 的桌面端进销存 / 收银系统，单机运行、数据本地存储，可打包为 Windows / macOS 桌面应用。
+
+<p align="center">
+  <img src="docs/screenshots/01-dashboard.png" width="900" alt="工作台">
+</p>
+
+## 界面预览
+
+| 收银台 | 商品列表 |
+| :---: | :---: |
+| [![收银台](docs/screenshots/02-cashier.png)](docs/screenshots/02-cashier.png) | [![商品列表](docs/screenshots/03-goods.png)](docs/screenshots/03-goods.png) |
+| **商品分类 / 单位** | **库存总览** |
+| [![商品分类](docs/screenshots/04-category.png)](docs/screenshots/04-category.png) | [![库存总览](docs/screenshots/05-stock.png)](docs/screenshots/05-stock.png) |
+| **出入库明细** | **采购入库** |
+| [![出入库明细](docs/screenshots/06-stock-log.png)](docs/screenshots/06-stock-log.png) | [![采购入库](docs/screenshots/07-purchase.png)](docs/screenshots/07-purchase.png) |
+| **采购记录** | **供应商管理** |
+| [![采购记录](docs/screenshots/08-purchase-record.png)](docs/screenshots/08-purchase-record.png) | [![供应商管理](docs/screenshots/09-supplier.png)](docs/screenshots/09-supplier.png) |
+| **销售订单** | **客户管理** |
+| [![销售订单](docs/screenshots/10-sales-record.png)](docs/screenshots/10-sales-record.png) | [![客户管理](docs/screenshots/11-customer.png)](docs/screenshots/11-customer.png) |
+| **销售报表** | **采购报表** |
+| [![销售报表](docs/screenshots/12-report-sales.png)](docs/screenshots/12-report-sales.png) | [![采购报表](docs/screenshots/13-report-purchase.png)](docs/screenshots/13-report-purchase.png) |
+
+<details>
+<summary>更多截图（内置官网入口）</summary>
+
+<p align="center">
+  <img src="docs/screenshots/14-website.png" width="900" alt="内置官网">
+</p>
+
+</details>
+
 ## 快速开始
 
 ### 开发模式
@@ -46,6 +77,7 @@ wails3 task common:update:build-assets && wails3 build
 │   └── windows/
 │       └── Taskfile.yml # Windows 构建任务
 ├── bin/                 # 构建产物（不提交 Git）
+├── docs/screenshots/    # README 截图
 ├── frontend/            # 前端代码（Vue/React）
 ├── main.go              # Go 入口
 ├── app.go               # 应用逻辑
