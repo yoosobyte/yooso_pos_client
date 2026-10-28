@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=悦速进销存
+Comment=悦速进销存 - 专业进销存管理软件
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/悦速进销存 %u
+Terminal=false
+Type=Application
+Icon=悦速进销存
+Categories=Utility;
+StartupWMClass=悦速进销存
+
+ 

@@ -1,0 +1,36 @@
+# ===== 开发工具 =====
+.task
+.idea
+.vscode/
+
+# ===== 前端 =====
+bin
+package-lock.json
+frontend/dist
+frontend/node_modules
+
+# ===== Wails 构建产物 =====
+build/bin/
+build/darwin/*.app
+build/darwin/Info.plist
+build/darwin/Info.dev.plist   # ← 建议加上
+build/darwin/Assets.car
+build/darwin/*.icns
+build/windows/*.exe
+build/windows/*.ico
+build/appicon.icon/
+build/*.icns
+
+# ===== 各平台特定 =====
+build/linux/appimage/build
+build/windows/nsis/MicrosoftEdgeWebview2Setup.exe
+
+# ===== 移动端生成 =====
+build/ios/xcode/overlay.json
+build/ios/xcode/gen/
+build/android/overlay.json
+build/android/gen/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db

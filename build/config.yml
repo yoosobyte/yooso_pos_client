@@ -1,0 +1,59 @@
+version: '3'
+
+# This information is used to generate the build assets.
+info:
+  companyName: "悦速互联"
+  productName: "悦速进销存"
+  productIdentifier: "com.yooso.jxc"
+  description: "悦速进销存 - 专业进销存管理软件"
+  copyright: "© 2026-2030 悦速互联. All Rights Reserved."
+  comments: "悦速进销存 | 定制开发: 17337771173(微信同号)"
+  version: "1.0.0"
+
+# Dev mode configuration
+dev_mode:
+  root_path: .
+  log_level: warn
+  debounce: 1000
+  ignore:
+    dir:
+      - .git
+      - node_modules
+      - frontend
+      - bin
+    file:
+      - .DS_Store
+      - .gitignore
+      - .gitkeep
+      - "*_test.go"
+    watched_extension:
+      - "*.go"
+      - "*.js" # Watch for changes to JS/TS files included using the //wails:include directive.
+      - "*.ts" # The frontend directory will be excluded entirely by the setting above.
+    git_ignore: true
+  executes:
+    - cmd: wails3 build DEV=true
+      type: blocking
+    - cmd: wails3 task common:dev:frontend
+      type: background
+    - cmd: wails3 task run
+      type: primary
+
+# File Associations
+# More information at: https://v3.wails.io/noit/done/yet
+fileAssociations:
+#  - ext: wails
+#    name: Wails
+#    description: Wails Application File
+#    iconName: wailsFileIcon
+#    role: Editor
+#  - ext: jpg
+#    name: JPEG
+#    description: Image File
+#    iconName: jpegFileIcon
+#    role: Editor
+#    mimeType: image/jpeg  # (optional)
+
+# Other data
+other:
+  - name: My Other Data
